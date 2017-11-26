@@ -55,6 +55,7 @@ public class GameBoard {
             for(int j = 0; j < 8; j++) {
                 if(board[i][j] != null && board[i][j].getPlayer() == opponent) {
                     value += checkAroundDefense(i, j, opponent);
+                } else if(board[i][j] != null && board[i][j].getPlayer() == !opponent) {
                     value += checkAroundOffense(i, j, opponent);
                 }
             }
