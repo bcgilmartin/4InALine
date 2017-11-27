@@ -12,7 +12,10 @@ public class GameBoard {
     
     //prints board i = rows and j = cols
     public void printBoard(GameTile[][] board) {
+    	System.out.println("  1 2 3 4 5 6 7 8");
+    	int ascii = 65;
         for(int i = 0; i < 8; i++) {
+        	System.out.print((char) (ascii + i) + " ");
             for(int j = 0; j < 8; j++) {
                 if(board[i][j] == null) {
                     System.out.print("_ ");
@@ -67,7 +70,6 @@ public class GameBoard {
         if((j-1 > -1) && board[i][j-1] != null && board[i][j-1].getPlayer() == opponent) {
             value++;
         }
-        System.out.println("def: " + value);
         return value;
     }
  
@@ -87,7 +89,6 @@ public class GameBoard {
         if((j-1 > -1) && board[i][j-1] != null && board[i][j-1].getPlayer() == player) {
             value--;
         }
-        System.out.println("off: " + value);
         return value;
     }
     
