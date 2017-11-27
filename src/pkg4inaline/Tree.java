@@ -32,7 +32,9 @@ public class Tree {
 		}		
 	}
 	
-		
+	public Node getRoot(){
+		return root;
+	}
 	
 	public void setBestMove(Node bestMove){
 		this.bestMove = bestMove;

@@ -23,8 +23,13 @@ public class TestDriver {
 	
 	
 	//runs alpha beta pruning once. Prints best move with a depth of 4. 
-	board.printBoard(ab.alphaBeta(root, 4, Integer.MIN_VALUE, Integer.MAX_VALUE, true).gt);
 	
+	tree.setBestMove(ab.alphaBeta(tree.getRoot(), 4, Integer.MIN_VALUE, Integer.MAX_VALUE, true));
+	tree.makeMove();
+	tree.setBestMove(ab.alphaBeta(tree.getRoot(), 4, Integer.MIN_VALUE, Integer.MAX_VALUE, true));
+	tree.makeMove();
+	tree.setBestMove(ab.alphaBeta(tree.getRoot(), 4, Integer.MIN_VALUE, Integer.MAX_VALUE, true));
+	tree.makeMove();
 	
 	
 	
